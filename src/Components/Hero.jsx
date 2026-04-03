@@ -3,11 +3,17 @@ import { useState, useEffect, useRef } from "react";
 // ╔══════════════════════════════════════════════════════════════╗
 // ║                  🎬 YOUR VIDEO IMPORTS                       ║
 // ╠══════════════════════════════════════════════════════════════╣
-import a from "../VIDEOS/a.mp4";
-import b from "../VIDEOS/b.mp4";
-import c from "../VIDEOS/c.mp4";
-import d from "../VIDEOS/d.mp4";
-import e from "../VIDEOS/f.mp4";
+
+const heroVideo =  "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178232/qew2qxyaqy698w7ofexj.mp4"
+const heroVideo2 =  "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178118/g_tjqrng.mp4"
+const heroVideo3 = "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178113/b_t4f26l.mp4"
+const heroVideo4 =  "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178123/d_q2og8f.mp4"
+const heroVideo5 = "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178182/e_mekkdt.mp4"
+const heroVideo6 = "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178183/f_tazbjq.mp4"
+
+
+
+
 // ╚══════════════════════════════════════════════════════════════╝
 
 // ╔══════════════════════════════════════════════════════════════╗
@@ -20,11 +26,15 @@ import e from "../VIDEOS/f.mp4";
 // ╚══════════════════════════════════════════════════════════════╝
 
 const SLIDES = [
-    { src: a, phrase: "in Luxury." },
-    { src: b, phrase: "at the Table." },
-    { src: c, phrase: "in Stillness." },
-    { src: d, phrase: "the Moment." },
-    { src: e, phrase: "with Purpose." },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178232/qew2qxyaqy698w7ofexj.mp4", phrase: "in Luxury." },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178118/g_tjqrng.mp4", phrase: "at the table.." },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178113/b_t4f26l.mp4", phrase: "in Stillness" },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178123/d_q2og8f.mp4", phrase: "the Moment" },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178182/e_mekkdt.mp4", phrase: "the Purpose." },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178163/c_azii1l.mp4", phrase: "the pure Rest." },
+    { src: "https://res.cloudinary.com/ddkmt2ys7/video/upload/v1775178183/f_tazbjq.mp4", phrase: "in the Quiet." },
+  
+    
 ];
 
 const SLIDE_DURATION = 6000;
