@@ -32,13 +32,11 @@ const SLIDE_DURATION = 6000;
 export default function Hero() {
     const [current, setCurrent] = useState(0);
     const [phraseVisible, setPhraseVisible] = useState(true);
-    const [paused, setPaused] = useState(false);
     const videoRefs = useRef([]);
     const intervalRef = useRef(null);
 
     // Auto-advance
     useEffect(() => {
-        if (paused) return;
         intervalRef.current = setInterval(() => {
             setPhraseVisible(false);
             setTimeout(() => {
@@ -47,7 +45,7 @@ export default function Hero() {
             }, 400);
         }, SLIDE_DURATION);
         return () => clearInterval(intervalRef.current);
-    }, [current, paused]);
+    }, [current]);
 
     // Phrase entrance on mount
     useEffect(() => {
@@ -62,12 +60,12 @@ export default function Hero() {
             if (!v) return;
             if (i === current) {
                 v.currentTime = 0;
-                paused ? v.pause() : v.play().catch(() => { });
+                v.play().catch(() => { });
             } else {
                 v.pause();
             }
         });
-    }, [current, paused]);
+    }, [current]);
 
     const goTo = (i) => {
         if (i === current) return;
