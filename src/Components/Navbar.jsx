@@ -116,8 +116,7 @@ export default function Navbar() {
                                 fontWeight: 300,
                             }}
                         >
-                            +1 234 567 890
-                        </a>
+                            +233 240 221 242     | +233 509 266 651          </a>
                         <BookButton light={isLight} />
                     </div>
 

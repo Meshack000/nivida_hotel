@@ -41,6 +41,8 @@ export default function About() {
     return (
         <>
             <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
         .about-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -62,6 +64,23 @@ export default function About() {
           gap: 48px;
           margin-bottom: 52px;
           flex-wrap: wrap;
+        }
+        .about-cta-link {
+          display: inline-block;
+          text-decoration: none;
+          font-family: 'Jost', sans-serif;
+          font-size: 11px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: #1C1C1A;
+          font-weight: 500;
+          border-bottom: 1px solid #1C1C1A;
+          padding-bottom: 3px;
+          transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .about-cta-link:hover {
+          color: #B89A5E;
+          border-color: #B89A5E;
         }
         @media (max-width: 900px) {
           .about-grid {
@@ -318,30 +337,7 @@ export default function About() {
                             animate={inView ? "visible" : "hidden"}
                             custom={0.75}
                         >
-                            <a
-                                href="#"
-                                style={{
-                                    display: "inline-block",
-                                    textDecoration: "none",
-                                    fontFamily: "'Jost', sans-serif",
-                                    fontSize: "11px",
-                                    letterSpacing: "0.2em",
-                                    textTransform: "uppercase",
-                                    color: "#1C1C1A",
-                                    fontWeight: 500,
-                                    borderBottom: "1px solid #1C1C1A",
-                                    paddingBottom: "3px",
-                                    transition: "color 0.3s ease, border-color 0.3s ease",
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.color = "#B89A5E";
-                                    e.currentTarget.style.borderColor = "#B89A5E";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.color = "#1C1C1A";
-                                    e.currentTarget.style.borderColor = "#1C1C1A";
-                                }}
-                            >
+                            <a href="#" className="about-cta-link">
                                 Discover Our Story
                             </a>
                         </motion.div>

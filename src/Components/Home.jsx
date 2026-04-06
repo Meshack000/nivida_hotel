@@ -8,9 +8,9 @@ import Footer from './Footer'
 function Home() {
   return (
     <div>
-        <Navbar/>
+        <Navbar/>    
         <Hero/>
-        <Rooms/>
+        <Rooms/> 
         <About/>
         <Footer/>
     </div>
